@@ -1,5 +1,7 @@
 package com.zml.demo.controller;
 
+import com.zml.demo.service.DemoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,10 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @RequestMapping("/app")
-public class demoController {
+public class DemoController {
+
+  @Autowired
+  private DemoService demoService;
 
   @GetMapping("get-hello")
   public String getAll() {
-    return "HELLO";
+    return demoService.getAll();
   }
 }
