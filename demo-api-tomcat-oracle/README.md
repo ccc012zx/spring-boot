@@ -1,9 +1,11 @@
 # Getting Started
 
 ### Reference Documentation
-http://ip:8089/app/get-hello
+http://ip:8089/index
 
 ### usage
-spring boot:2.1.8.RELEASE
+jdk8
+spring boot:2.2.5.RELEASE
 controller+service+dao
-no database
+oracle/mysql(jdbc)
+tomcat
